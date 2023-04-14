@@ -16,7 +16,7 @@ namespace negocio
 
             try
             {
-                datos.setearConsulta("select T.Id, T.Fecha, T.Cliente, S.Corte, A.Nombre, T.Importe from AUTOR A, SERVICIO S, TURNOS T where T.IdServicio = S.Id and T.IdAutor = A.Id");
+                datos.setearConsulta("select T.Id, T.Fecha, T.Cliente, S.Corte, A.Nombre, T.Importe from AUTOR A, SERVICIO S, TURNOS T where T.IdServicio = S.Id and T.IdAutor = A.Id order by Fecha asc");
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
@@ -108,5 +108,6 @@ namespace negocio
                 throw ex;
             }
         }
+
     }
 }

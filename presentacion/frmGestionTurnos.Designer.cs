@@ -1,6 +1,6 @@
 ﻿namespace presentacion
 {
-    partial class frmNuevoTurno
+    partial class frmGestionTurnos
     {
         /// <summary>
         /// Required designer variable.
@@ -45,7 +45,7 @@
             // lblFecha
             // 
             this.lblFecha.AutoSize = true;
-            this.lblFecha.Location = new System.Drawing.Point(59, 34);
+            this.lblFecha.Location = new System.Drawing.Point(33, 35);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(40, 13);
             this.lblFecha.TabIndex = 0;
@@ -54,7 +54,7 @@
             // lblCliente
             // 
             this.lblCliente.AutoSize = true;
-            this.lblCliente.Location = new System.Drawing.Point(59, 91);
+            this.lblCliente.Location = new System.Drawing.Point(33, 92);
             this.lblCliente.Name = "lblCliente";
             this.lblCliente.Size = new System.Drawing.Size(42, 13);
             this.lblCliente.TabIndex = 1;
@@ -63,7 +63,7 @@
             // lblServicio
             // 
             this.lblServicio.AutoSize = true;
-            this.lblServicio.Location = new System.Drawing.Point(59, 148);
+            this.lblServicio.Location = new System.Drawing.Point(33, 149);
             this.lblServicio.Name = "lblServicio";
             this.lblServicio.Size = new System.Drawing.Size(48, 13);
             this.lblServicio.TabIndex = 2;
@@ -72,7 +72,7 @@
             // lblAutor
             // 
             this.lblAutor.AutoSize = true;
-            this.lblAutor.Location = new System.Drawing.Point(59, 205);
+            this.lblAutor.Location = new System.Drawing.Point(33, 204);
             this.lblAutor.Name = "lblAutor";
             this.lblAutor.Size = new System.Drawing.Size(35, 13);
             this.lblAutor.TabIndex = 3;
@@ -81,57 +81,57 @@
             // cboServicio
             // 
             this.cboServicio.FormattingEnabled = true;
-            this.cboServicio.Location = new System.Drawing.Point(139, 146);
+            this.cboServicio.Location = new System.Drawing.Point(113, 147);
             this.cboServicio.Name = "cboServicio";
             this.cboServicio.Size = new System.Drawing.Size(200, 21);
-            this.cboServicio.TabIndex = 5;
+            this.cboServicio.TabIndex = 2;
             // 
             // cboAutor
             // 
             this.cboAutor.FormattingEnabled = true;
-            this.cboAutor.Location = new System.Drawing.Point(139, 203);
+            this.cboAutor.Location = new System.Drawing.Point(113, 204);
             this.cboAutor.Name = "cboAutor";
             this.cboAutor.Size = new System.Drawing.Size(200, 21);
-            this.cboAutor.TabIndex = 6;
+            this.cboAutor.TabIndex = 3;
             // 
             // txtCliente
             // 
-            this.txtCliente.Location = new System.Drawing.Point(139, 90);
+            this.txtCliente.Location = new System.Drawing.Point(113, 91);
             this.txtCliente.Name = "txtCliente";
             this.txtCliente.Size = new System.Drawing.Size(200, 20);
-            this.txtCliente.TabIndex = 7;
+            this.txtCliente.TabIndex = 1;
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(62, 337);
+            this.btnAceptar.Location = new System.Drawing.Point(36, 338);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
-            this.btnAceptar.TabIndex = 8;
+            this.btnAceptar.TabIndex = 5;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(264, 337);
+            this.btnCancelar.Location = new System.Drawing.Point(238, 338);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 9;
+            this.btnCancelar.TabIndex = 6;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // txtImporte
             // 
-            this.txtImporte.Location = new System.Drawing.Point(139, 260);
+            this.txtImporte.Location = new System.Drawing.Point(113, 261);
             this.txtImporte.Name = "txtImporte";
             this.txtImporte.Size = new System.Drawing.Size(200, 20);
-            this.txtImporte.TabIndex = 10;
+            this.txtImporte.TabIndex = 4;
             // 
             // lblImporte
             // 
             this.lblImporte.AutoSize = true;
-            this.lblImporte.Location = new System.Drawing.Point(59, 262);
+            this.lblImporte.Location = new System.Drawing.Point(33, 263);
             this.lblImporte.Name = "lblImporte";
             this.lblImporte.Size = new System.Drawing.Size(45, 13);
             this.lblImporte.TabIndex = 11;
@@ -139,16 +139,18 @@
             // 
             // dtpFecha
             // 
-            this.dtpFecha.Location = new System.Drawing.Point(139, 34);
+            this.dtpFecha.CustomFormat = "HH mm dddd d MMMM yyyy";
+            this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpFecha.Location = new System.Drawing.Point(113, 35);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(200, 20);
-            this.dtpFecha.TabIndex = 12;
+            this.dtpFecha.TabIndex = 0;
             // 
-            // frmNuevoTurno
+            // frmGestionTurnos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(360, 450);
+            this.ClientSize = new System.Drawing.Size(363, 450);
             this.Controls.Add(this.dtpFecha);
             this.Controls.Add(this.lblImporte);
             this.Controls.Add(this.txtImporte);
@@ -161,8 +163,10 @@
             this.Controls.Add(this.lblServicio);
             this.Controls.Add(this.lblCliente);
             this.Controls.Add(this.lblFecha);
-            this.Name = "frmNuevoTurno";
-            this.Text = "frmNuevoTurno";
+            this.MaximizeBox = false;
+            this.Name = "frmGestionTurnos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Gestión de turnos";
             this.Load += new System.EventHandler(this.frmNuevoTurno_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

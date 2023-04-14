@@ -12,10 +12,10 @@ using dominio;
 
 namespace presentacion
 {
-    public partial class frmTurnos : Form
+    public partial class frmPanelTurnos : Form
     {
         List<Turno> listaTurno;
-        public frmTurnos()
+        public frmPanelTurnos()
         {
             InitializeComponent();
         }
@@ -41,7 +41,7 @@ namespace presentacion
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            frmNuevoTurno nuevo = new frmNuevoTurno();
+            frmGestionTurnos nuevo = new frmGestionTurnos();
             nuevo.ShowDialog();
             cargar();
         }
@@ -51,7 +51,7 @@ namespace presentacion
             Turno seleccionado;
             seleccionado = (Turno)dgvTurnos.CurrentRow.DataBoundItem;
 
-            frmNuevoTurno modificar = new frmNuevoTurno(seleccionado); 
+            frmGestionTurnos modificar = new frmGestionTurnos(seleccionado); 
             modificar.ShowDialog();
             cargar();
         }

@@ -12,14 +12,14 @@ using negocio;
 
 namespace presentacion
 {
-    public partial class frmNuevoTurno : Form
+    public partial class frmGestionTurnos : Form
     {
         private Turno turno = null;
-        public frmNuevoTurno()
+        public frmGestionTurnos()
         {
             InitializeComponent();
         }
-        public frmNuevoTurno(Turno turno)
+        public frmGestionTurnos(Turno turno)
         {
             InitializeComponent();
             this.turno = turno;
@@ -90,5 +90,7 @@ namespace presentacion
                 throw ex;
             }
         }
+
+        
     }
 }

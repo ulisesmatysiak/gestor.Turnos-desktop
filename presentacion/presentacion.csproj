@@ -46,25 +46,70 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmNuevoTurno.cs">
+    <Compile Include="frmPanelAutores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmNuevoTurno.Designer.cs">
-      <DependentUpon>frmNuevoTurno.cs</DependentUpon>
+    <Compile Include="frmPanelAutores.Designer.cs">
+      <DependentUpon>frmPanelAutores.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmTurnos.cs">
+    <Compile Include="frmGestionAutores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmTurnos.Designer.cs">
-      <DependentUpon>frmTurnos.cs</DependentUpon>
+    <Compile Include="frmGestionAutores.Designer.cs">
+      <DependentUpon>frmGestionAutores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGestionServicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionServicios.Designer.cs">
+      <DependentUpon>frmGestionServicios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGestionTurnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionTurnos.Designer.cs">
+      <DependentUpon>frmGestionTurnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPanel.Designer.cs">
+      <DependentUpon>frmPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPanelServicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPanelServicios.Designer.cs">
+      <DependentUpon>frmPanelServicios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPanelTurnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPanelTurnos.Designer.cs">
+      <DependentUpon>frmPanelTurnos.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmNuevoTurno.resx">
-      <DependentUpon>frmNuevoTurno.cs</DependentUpon>
+    <EmbeddedResource Include="frmPanelAutores.resx">
+      <DependentUpon>frmPanelAutores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmTurnos.resx">
-      <DependentUpon>frmTurnos.cs</DependentUpon>
+    <EmbeddedResource Include="frmGestionAutores.resx">
+      <DependentUpon>frmGestionAutores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGestionServicios.resx">
+      <DependentUpon>frmGestionServicios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGestionTurnos.resx">
+      <DependentUpon>frmGestionTurnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPanel.resx">
+      <DependentUpon>frmPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPanelServicios.resx">
+      <DependentUpon>frmPanelServicios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPanelTurnos.resx">
+      <DependentUpon>frmPanelTurnos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

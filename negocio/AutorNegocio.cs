@@ -38,5 +38,61 @@ namespace negocio
                 datos.cerrarConexion();
             }
         }
+
+        public void agregar(Autor nuevo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.setearConsulta("insert into AUTOR(Nombre) values (@Nombre)");
+                datos.setearParametro("@Corte", nuevo.Nombre);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+        public void modificar(Autor autor)
+        {
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.setearConsulta("update AUTOR set Nombre = @Nombre where Id = @Id");
+                datos.setearParametro("@Nombre", autor.Nombre);
+                datos.setearParametro("@Id", autor.Id);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+        public void eliminar(int Id)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("delete from AUTOR where Id = @Id");
+                datos.setearParametro("@Id", Id);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
