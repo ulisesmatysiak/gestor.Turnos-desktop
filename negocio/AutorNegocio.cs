@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -46,7 +45,7 @@ namespace negocio
             try
             {
                 datos.setearConsulta("insert into AUTOR(Nombre) values (@Nombre)");
-                datos.setearParametro("@Corte", nuevo.Nombre);
+                datos.setearParametro("@Nombre", nuevo.Nombre);
                 datos.ejecutarAccion();
             }
             catch (Exception ex)

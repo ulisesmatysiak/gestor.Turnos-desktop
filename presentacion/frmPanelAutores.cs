@@ -38,5 +38,17 @@ namespace presentacion
                 throw ex;
             }
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            frmGestionAutores nuevo = new frmGestionAutores();
+            nuevo.ShowDialog();
+            cargar();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
