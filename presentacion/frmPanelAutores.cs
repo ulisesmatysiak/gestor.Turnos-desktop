@@ -20,7 +20,7 @@ namespace presentacion
             InitializeComponent();
         }
 
-        private void frmAutores_Load(object sender, EventArgs e)
+        private void frmPanelAutores_Load(object sender, EventArgs e)
         {
             cargar();
         }

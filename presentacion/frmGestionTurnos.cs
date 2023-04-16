@@ -30,7 +30,7 @@ namespace presentacion
             Close();
         }
 
-        private void frmNuevoTurno_Load(object sender, EventArgs e)
+        private void frmGestionTurnos_Load(object sender, EventArgs e)
         {
             ServicioNegocio servicioNegocio = new ServicioNegocio();
             AutorNegocio autorNegocio = new AutorNegocio();

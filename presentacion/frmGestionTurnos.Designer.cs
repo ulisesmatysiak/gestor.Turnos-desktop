@@ -167,7 +167,7 @@
             this.Name = "frmGestionTurnos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestión de turnos";
-            this.Load += new System.EventHandler(this.frmNuevoTurno_Load);
+            this.Load += new System.EventHandler(this.frmGestionTurnos_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

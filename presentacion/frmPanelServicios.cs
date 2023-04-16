@@ -20,7 +20,7 @@ namespace presentacion
             InitializeComponent();
         }
 
-        private void frmServicios_Load(object sender, EventArgs e)
+        private void frmPanelServicios_Load(object sender, EventArgs e)
         {
             cargar();
         }
@@ -37,6 +37,13 @@ namespace presentacion
             {
                 throw ex;
             }
+        }
+
+        private void btnAgregarServicio_Click(object sender, EventArgs e)
+        {
+            frmGestionServicios nuevo = new frmGestionServicios();
+            nuevo.ShowDialog();
+            cargar();
         }
     }
 }

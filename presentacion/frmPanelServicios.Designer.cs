@@ -30,7 +30,6 @@
         {
             this.dgvServicios = new System.Windows.Forms.DataGridView();
             this.btnAgregarServicio = new System.Windows.Forms.Button();
-            this.btnModificarServicio = new System.Windows.Forms.Button();
             this.btnElliminarServicio = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvServicios)).BeginInit();
             this.SuspendLayout();
@@ -51,38 +50,29 @@
             this.btnAgregarServicio.TabIndex = 1;
             this.btnAgregarServicio.Text = "Agregar";
             this.btnAgregarServicio.UseVisualStyleBackColor = true;
-            // 
-            // btnModificarServicio
-            // 
-            this.btnModificarServicio.Location = new System.Drawing.Point(13, 288);
-            this.btnModificarServicio.Name = "btnModificarServicio";
-            this.btnModificarServicio.Size = new System.Drawing.Size(75, 23);
-            this.btnModificarServicio.TabIndex = 2;
-            this.btnModificarServicio.Text = "Modificar";
-            this.btnModificarServicio.UseVisualStyleBackColor = true;
+            this.btnAgregarServicio.Click += new System.EventHandler(this.btnAgregarServicio_Click);
             // 
             // btnElliminarServicio
             // 
-            this.btnElliminarServicio.Location = new System.Drawing.Point(13, 341);
+            this.btnElliminarServicio.Location = new System.Drawing.Point(190, 226);
             this.btnElliminarServicio.Name = "btnElliminarServicio";
             this.btnElliminarServicio.Size = new System.Drawing.Size(75, 23);
             this.btnElliminarServicio.TabIndex = 3;
             this.btnElliminarServicio.Text = "Eliminar";
             this.btnElliminarServicio.UseVisualStyleBackColor = true;
             // 
-            // frmServicios
+            // frmPanelServicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(278, 450);
             this.Controls.Add(this.btnElliminarServicio);
-            this.Controls.Add(this.btnModificarServicio);
             this.Controls.Add(this.btnAgregarServicio);
             this.Controls.Add(this.dgvServicios);
             this.MaximizeBox = false;
-            this.Name = "frmServicios";
+            this.Name = "frmPanelServicios";
             this.Text = "Servicios";
-            this.Load += new System.EventHandler(this.frmServicios_Load);
+            this.Load += new System.EventHandler(this.frmPanelServicios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvServicios)).EndInit();
             this.ResumeLayout(false);
 
@@ -92,7 +82,6 @@
 
         private System.Windows.Forms.DataGridView dgvServicios;
         private System.Windows.Forms.Button btnAgregarServicio;
-        private System.Windows.Forms.Button btnModificarServicio;
         private System.Windows.Forms.Button btnElliminarServicio;
     }
 }
