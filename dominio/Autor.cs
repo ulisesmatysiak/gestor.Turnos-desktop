@@ -16,5 +16,7 @@ namespace dominio
         {
             return Nombre;
         }
+
+        public string Apellido { get; set; }
     }
 }

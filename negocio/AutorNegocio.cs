@@ -16,13 +16,14 @@ namespace negocio
 
             try
             {
-                datos.setearConsulta("select Id, Nombre from Autor");
+                datos.setearConsulta("select Id, Nombre, Apellido from Autor");
                 datos.ejecutarLectura();
                 while (datos.Lector.Read())
                 {
                     Autor aux = new Autor();
                     aux.Id = (int)datos.Lector["Id"];
                     aux.Nombre = (string)datos.Lector["Nombre"];
+                    aux.Apellido = (string)datos.Lector["Apellido"];
 
                     lista.Add(aux);
                 }
@@ -44,8 +45,9 @@ namespace negocio
 
             try
             {
-                datos.setearConsulta("insert into AUTOR(Nombre) values (@Nombre)");
+                datos.setearConsulta("insert into AUTOR(Nombre,Apellido) values (@Nombre,@Apellido)");
                 datos.setearParametro("@Nombre", nuevo.Nombre);
+                datos.setearParametro("@Apellido", nuevo.Apellido);
                 datos.ejecutarAccion();
             }
             catch (Exception ex)

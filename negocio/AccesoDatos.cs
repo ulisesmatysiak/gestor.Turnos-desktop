@@ -60,7 +60,10 @@ namespace negocio
 
         public void setearParametro(string nombre, object valor)
         {
-            comando.Parameters.AddWithValue(nombre, valor);
+            SqlParameter parametro = new SqlParameter(nombre,valor);
+            comando.Parameters.Add(parametro);
+
+            //comando.Parameters.AddWithValue(nombre, valor);
         }
 
         public void cerrarConexion()

@@ -1,9 +1,6 @@
-﻿using System;
+﻿using dominio;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using dominio;
 
 namespace negocio
 {
@@ -16,13 +13,14 @@ namespace negocio
 
             try
             {
-                datos.setearConsulta("select Id, Corte from SERVICIO");
+                datos.setearConsulta("select Id, Corte, Precio from SERVICIO");
                 datos.ejecutarLectura();
                 while (datos.Lector.Read())
                 {
                     Servicio aux = new Servicio();
                     aux.Id = (int)datos.Lector["Id"];
                     aux.Corte = (string)datos.Lector["Corte"];
+                    aux.Precio = (decimal)datos.Lector["Precio"];
 
                     lista.Add(aux);
                 }
@@ -44,8 +42,9 @@ namespace negocio
 
             try
             {
-                datos.setearConsulta("insert into SERVICIO(Corte) values (@Corte)");
+                datos.setearConsulta("insert into SERVICIO(Corte,Precio) values(@Corte,@Precio)");
                 datos.setearParametro("@Corte", nuevo.Corte);
+                datos.setearParametro("@Precio",nuevo.Precio);
                 datos.ejecutarAccion();
             }
             catch (Exception ex)
