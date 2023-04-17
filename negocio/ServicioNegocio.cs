@@ -42,7 +42,7 @@ namespace negocio
             try
             {
                 datos.setearConsulta("insert into SERVICIO(Corte) values(@Corte)");
-                datos.setearParametro("@Corte", nuevo.Corte);              
+                datos.setearParametro("@Corte", nuevo.Corte);
                 datos.ejecutarAccion();
             }
             catch (Exception ex)
