@@ -16,7 +16,5 @@ namespace dominio
         {
             return Corte;
         }
-
-        public decimal Precio { get; set; }
     }
 }
