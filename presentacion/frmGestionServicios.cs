@@ -36,11 +36,22 @@ namespace presentacion
             Servicio servicio = new Servicio();
             ServicioNegocio negocio = new ServicioNegocio();
 
-            if (servicio == null)
-                servicio = new Servicio();
+            try
+            {
+                servicio.Corte = txtServicios.Text;
+                negocio.agregar(servicio);
+                MessageBox.Show("Agregado Exitosamente");
+                Close();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
 
-            negocio.agregar(servicio);
-            MessageBox.Show("AgregadoExitosamente");
+            //if (servicio == null)
+            //    servicio = new Servicio();
+
+           
         }
     }
 }

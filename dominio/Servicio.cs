@@ -12,9 +12,9 @@ namespace dominio
 
         public string Corte { get; set; }
 
-        public override string ToString()
-        {
-            return Corte;
-        }
+        //public override string ToString()
+        //{
+        //    return Corte;
+        //}
     }
 }

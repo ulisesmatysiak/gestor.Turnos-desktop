@@ -60,6 +60,7 @@
             this.btnElliminarServicio.TabIndex = 3;
             this.btnElliminarServicio.Text = "Eliminar";
             this.btnElliminarServicio.UseVisualStyleBackColor = true;
+            this.btnElliminarServicio.Click += new System.EventHandler(this.btnElliminarServicio_Click);
             // 
             // frmPanelServicios
             // 

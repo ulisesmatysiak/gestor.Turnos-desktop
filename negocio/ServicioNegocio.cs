@@ -55,26 +55,26 @@ namespace negocio
             }
         }
 
-        public void modificar(Servicio servicio)
-        {
-            AccesoDatos datos = new AccesoDatos();
+        //public void modificar(Servicio servicio)
+        //{
+        //    AccesoDatos datos = new AccesoDatos();
 
-            try
-            {
-                datos.setearConsulta("update SERVICIO set Corte = @Corte where Id = @Id");
-                datos.setearParametro("@Corte", servicio.Id);
-                datos.setearParametro("@Id", servicio.Id);
-                datos.ejecutarAccion();
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            finally
-            {
-                datos.cerrarConexion();
-            }
-        }
+        //    try
+        //    {
+        //        datos.setearConsulta("update SERVICIO set Corte = @Corte where Id = @Id");
+        //        datos.setearParametro("@Corte", servicio.Id);
+        //        datos.setearParametro("@Id", servicio.Id);
+        //        datos.ejecutarAccion();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw ex;
+        //    }
+        //    finally
+        //    {
+        //        datos.cerrarConexion();
+        //    }
+        //}
 
         public void eliminar(int Id)
         {

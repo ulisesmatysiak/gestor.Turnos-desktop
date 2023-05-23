@@ -45,5 +45,26 @@ namespace presentacion
             nuevo.ShowDialog();
             cargar();
         }
+
+        private void btnElliminarServicio_Click(object sender, EventArgs e)
+        {
+            ServicioNegocio negocio = new ServicioNegocio();
+            Servicio seleccionado;
+
+            try
+            {
+                DialogResult respuesta = MessageBox.Show("Desea eliminar el articulo", "Eliminando", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (respuesta == DialogResult.Yes)
+                {
+                    seleccionado = (Servicio)dgvServicios.CurrentRow.DataBoundItem;
+                    negocio.eliminar(seleccionado.Id);
+                    cargar();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

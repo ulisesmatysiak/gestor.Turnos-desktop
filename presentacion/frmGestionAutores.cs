@@ -14,17 +14,17 @@ namespace presentacion
 {
     public partial class frmGestionAutores : Form
     {
-        private Autor autor = null;
+        //private Autor autor = null;
         public frmGestionAutores()
         {
             InitializeComponent();
         }
 
-        public frmGestionAutores(Autor autor)
-        {
-            InitializeComponent();
-            this.autor = autor;
-        }
+        //public frmGestionAutores(Autor autor)
+        //{
+        //    InitializeComponent();
+        //    this.autor = autor;
+        //}
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
@@ -33,12 +33,13 @@ namespace presentacion
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
+            Autor autor = new Autor();
             AutorNegocio negocio = new AutorNegocio();
             try
             {
-                if (autor == null)
-                    autor = new Autor();
-
+                //if (autor == null)
+                //    autor = new Autor();
+                autor.Nombre = txtNombre.Text;
                 negocio.agregar(autor);
                 MessageBox.Show("Agregado exitosamente");
                 Close();

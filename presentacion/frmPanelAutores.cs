@@ -48,6 +48,23 @@ namespace presentacion
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            AutorNegocio negocio = new AutorNegocio();
+            Autor seleccionado;
+
+            try
+            {
+                DialogResult respuesta = MessageBox.Show("Desea eliminar el articulo", "Eliminando", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (respuesta == DialogResult.Yes)
+                {
+                    seleccionado = (Autor)dgvAutores.CurrentRow.DataBoundItem;
+                    negocio.eliminar(seleccionado.Id);
+                    cargar();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
 
         }
     }
