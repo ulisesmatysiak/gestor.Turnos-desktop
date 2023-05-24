@@ -84,5 +84,33 @@ namespace presentacion
                 Turno seleccionado = (Turno)dgvTurnos.CurrentRow.DataBoundItem;
             }
         }
+
+        private void btnHoy_Click(object sender, EventArgs e)
+        {
+            TurnoNegocio negocio = new TurnoNegocio();
+            try
+            {
+                listaTurno = negocio.listarHoy();
+                dgvTurnos.DataSource = listaTurno;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void btnSemana_Click(object sender, EventArgs e)
+        {
+            TurnoNegocio negocio = new TurnoNegocio();
+            try
+            {
+                listaTurno = negocio.listarSemana();
+                dgvTurnos.DataSource = listaTurno;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

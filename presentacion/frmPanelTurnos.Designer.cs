@@ -32,6 +32,8 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
+            this.btnHoy = new System.Windows.Forms.Button();
+            this.btnSemana = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTurnos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,18 +77,40 @@
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
-            // frmTurnos
+            // btnHoy
+            // 
+            this.btnHoy.Location = new System.Drawing.Point(464, 383);
+            this.btnHoy.Name = "btnHoy";
+            this.btnHoy.Size = new System.Drawing.Size(75, 23);
+            this.btnHoy.TabIndex = 4;
+            this.btnHoy.Text = "Hoy";
+            this.btnHoy.UseVisualStyleBackColor = true;
+            this.btnHoy.Click += new System.EventHandler(this.btnHoy_Click);
+            // 
+            // btnSemana
+            // 
+            this.btnSemana.Location = new System.Drawing.Point(564, 384);
+            this.btnSemana.Name = "btnSemana";
+            this.btnSemana.Size = new System.Drawing.Size(75, 23);
+            this.btnSemana.TabIndex = 5;
+            this.btnSemana.Text = "Semana";
+            this.btnSemana.UseVisualStyleBackColor = true;
+            this.btnSemana.Click += new System.EventHandler(this.btnSemana_Click);
+            // 
+            // frmPanelTurnos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(670, 450);
+            this.Controls.Add(this.btnSemana);
+            this.Controls.Add(this.btnHoy);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.dgvTurnos);
             this.MaximizeBox = false;
-            this.Name = "frmTurnos";
+            this.Name = "frmPanelTurnos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Turnos";
             this.Load += new System.EventHandler(this.frmTurnos_Load);
@@ -101,5 +125,7 @@
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnHoy;
+        private System.Windows.Forms.Button btnSemana;
     }
 }
