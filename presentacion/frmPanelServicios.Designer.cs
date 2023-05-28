@@ -36,40 +36,50 @@
             // 
             // dgvServicios
             // 
+            this.dgvServicios.BackgroundColor = System.Drawing.SystemColors.WindowFrame;
+            this.dgvServicios.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvServicios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvServicios.Location = new System.Drawing.Point(12, 12);
+            this.dgvServicios.Location = new System.Drawing.Point(41, 32);
             this.dgvServicios.Name = "dgvServicios";
-            this.dgvServicios.Size = new System.Drawing.Size(253, 150);
+            this.dgvServicios.Size = new System.Drawing.Size(169, 150);
             this.dgvServicios.TabIndex = 0;
             // 
             // btnAgregarServicio
             // 
-            this.btnAgregarServicio.Location = new System.Drawing.Point(13, 226);
+            this.btnAgregarServicio.BackColor = System.Drawing.SystemColors.WindowText;
+            this.btnAgregarServicio.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAgregarServicio.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnAgregarServicio.Location = new System.Drawing.Point(41, 218);
             this.btnAgregarServicio.Name = "btnAgregarServicio";
             this.btnAgregarServicio.Size = new System.Drawing.Size(75, 23);
             this.btnAgregarServicio.TabIndex = 1;
             this.btnAgregarServicio.Text = "Agregar";
-            this.btnAgregarServicio.UseVisualStyleBackColor = true;
+            this.btnAgregarServicio.UseVisualStyleBackColor = false;
             this.btnAgregarServicio.Click += new System.EventHandler(this.btnAgregarServicio_Click);
             // 
             // btnElliminarServicio
             // 
-            this.btnElliminarServicio.Location = new System.Drawing.Point(190, 226);
+            this.btnElliminarServicio.BackColor = System.Drawing.SystemColors.WindowText;
+            this.btnElliminarServicio.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnElliminarServicio.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnElliminarServicio.Location = new System.Drawing.Point(135, 218);
             this.btnElliminarServicio.Name = "btnElliminarServicio";
             this.btnElliminarServicio.Size = new System.Drawing.Size(75, 23);
             this.btnElliminarServicio.TabIndex = 3;
             this.btnElliminarServicio.Text = "Eliminar";
-            this.btnElliminarServicio.UseVisualStyleBackColor = true;
+            this.btnElliminarServicio.UseVisualStyleBackColor = false;
             this.btnElliminarServicio.Click += new System.EventHandler(this.btnElliminarServicio_Click);
             // 
             // frmPanelServicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(278, 450);
+            this.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.ClientSize = new System.Drawing.Size(245, 260);
             this.Controls.Add(this.btnElliminarServicio);
             this.Controls.Add(this.btnAgregarServicio);
             this.Controls.Add(this.dgvServicios);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.Name = "frmPanelServicios";
             this.Text = "Servicios";

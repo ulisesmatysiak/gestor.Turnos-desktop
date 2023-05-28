@@ -23,6 +23,7 @@ namespace presentacion
         private void frmPanelServicios_Load(object sender, EventArgs e)
         {
             cargar();
+            ocultarColumnas();
         }
 
         private void cargar()
@@ -65,6 +66,11 @@ namespace presentacion
             {
                 throw ex;
             }
+        }
+
+        private void ocultarColumnas()
+        {
+            dgvServicios.Columns["Id"].Visible = false;
         }
     }
 }

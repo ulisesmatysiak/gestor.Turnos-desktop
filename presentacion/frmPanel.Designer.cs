@@ -37,9 +37,10 @@
             // btnTurnos
             // 
             this.btnTurnos.BackColor = System.Drawing.Color.Black;
+            this.btnTurnos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnTurnos.Font = new System.Drawing.Font("Goudy Stout", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTurnos.ForeColor = System.Drawing.Color.White;
-            this.btnTurnos.Location = new System.Drawing.Point(264, 134);
+            this.btnTurnos.Location = new System.Drawing.Point(254, 184);
             this.btnTurnos.Name = "btnTurnos";
             this.btnTurnos.Size = new System.Drawing.Size(199, 80);
             this.btnTurnos.TabIndex = 0;
@@ -50,11 +51,12 @@
             // btnServicios
             // 
             this.btnServicios.BackColor = System.Drawing.Color.Black;
+            this.btnServicios.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnServicios.Font = new System.Drawing.Font("Goudy Stout", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnServicios.ForeColor = System.Drawing.Color.White;
-            this.btnServicios.Location = new System.Drawing.Point(264, 225);
+            this.btnServicios.Location = new System.Drawing.Point(562, 339);
             this.btnServicios.Name = "btnServicios";
-            this.btnServicios.Size = new System.Drawing.Size(199, 80);
+            this.btnServicios.Size = new System.Drawing.Size(142, 51);
             this.btnServicios.TabIndex = 1;
             this.btnServicios.Text = "Servicios ";
             this.btnServicios.UseVisualStyleBackColor = false;
@@ -63,11 +65,12 @@
             // btnAutores
             // 
             this.btnAutores.BackColor = System.Drawing.Color.Black;
+            this.btnAutores.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAutores.Font = new System.Drawing.Font("Goudy Stout", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAutores.ForeColor = System.Drawing.Color.White;
-            this.btnAutores.Location = new System.Drawing.Point(264, 316);
+            this.btnAutores.Location = new System.Drawing.Point(34, 339);
             this.btnAutores.Name = "btnAutores";
-            this.btnAutores.Size = new System.Drawing.Size(199, 80);
+            this.btnAutores.Size = new System.Drawing.Size(142, 51);
             this.btnAutores.TabIndex = 2;
             this.btnAutores.Text = "Autores";
             this.btnAutores.UseVisualStyleBackColor = false;
@@ -87,7 +90,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.ClientSize = new System.Drawing.Size(730, 450);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAutores);

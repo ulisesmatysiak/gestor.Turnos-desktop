@@ -23,6 +23,7 @@ namespace presentacion
         private void frmTurnos_Load(object sender, EventArgs e)
         {
             cargar();
+            ocultarColumnas();
         }
 
         private void cargar()
@@ -111,6 +112,11 @@ namespace presentacion
             {
                 throw ex;
             }
+        }
+
+        private void ocultarColumnas()
+        {
+            dgvTurnos.Columns["Id"].Visible = false;
         }
     }
 }

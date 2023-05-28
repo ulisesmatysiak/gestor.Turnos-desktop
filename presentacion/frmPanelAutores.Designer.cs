@@ -36,40 +36,50 @@
             // 
             // dgvAutores
             // 
+            this.dgvAutores.BackgroundColor = System.Drawing.SystemColors.WindowFrame;
+            this.dgvAutores.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvAutores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAutores.Location = new System.Drawing.Point(12, 12);
+            this.dgvAutores.Location = new System.Drawing.Point(20, 21);
             this.dgvAutores.Name = "dgvAutores";
-            this.dgvAutores.Size = new System.Drawing.Size(289, 150);
+            this.dgvAutores.Size = new System.Drawing.Size(197, 134);
             this.dgvAutores.TabIndex = 0;
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(13, 231);
+            this.btnAgregar.BackColor = System.Drawing.SystemColors.WindowText;
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAgregar.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnAgregar.Location = new System.Drawing.Point(20, 216);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
             this.btnAgregar.TabIndex = 1;
             this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(226, 231);
+            this.btnEliminar.BackColor = System.Drawing.SystemColors.WindowText;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEliminar.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnEliminar.Location = new System.Drawing.Point(142, 216);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
             this.btnEliminar.TabIndex = 3;
             this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // frmPanelAutores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(313, 450);
+            this.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.ClientSize = new System.Drawing.Size(229, 274);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.dgvAutores);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.Name = "frmPanelAutores";
             this.Text = "Autores";
