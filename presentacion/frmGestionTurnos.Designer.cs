@@ -83,7 +83,7 @@
             this.cboServicio.FormattingEnabled = true;
             this.cboServicio.Location = new System.Drawing.Point(113, 147);
             this.cboServicio.Name = "cboServicio";
-            this.cboServicio.Size = new System.Drawing.Size(200, 21);
+            this.cboServicio.Size = new System.Drawing.Size(226, 21);
             this.cboServicio.TabIndex = 2;
             // 
             // cboAutor
@@ -91,41 +91,47 @@
             this.cboAutor.FormattingEnabled = true;
             this.cboAutor.Location = new System.Drawing.Point(113, 204);
             this.cboAutor.Name = "cboAutor";
-            this.cboAutor.Size = new System.Drawing.Size(200, 21);
+            this.cboAutor.Size = new System.Drawing.Size(226, 21);
             this.cboAutor.TabIndex = 3;
             // 
             // txtCliente
             // 
             this.txtCliente.Location = new System.Drawing.Point(113, 91);
             this.txtCliente.Name = "txtCliente";
-            this.txtCliente.Size = new System.Drawing.Size(200, 20);
+            this.txtCliente.Size = new System.Drawing.Size(226, 20);
             this.txtCliente.TabIndex = 1;
             // 
             // btnAceptar
             // 
+            this.btnAceptar.BackColor = System.Drawing.SystemColors.WindowText;
+            this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAceptar.ForeColor = System.Drawing.SystemColors.Window;
             this.btnAceptar.Location = new System.Drawing.Point(36, 338);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
             this.btnAceptar.TabIndex = 5;
             this.btnAceptar.Text = "Aceptar";
-            this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.UseVisualStyleBackColor = false;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(238, 338);
+            this.btnCancelar.BackColor = System.Drawing.SystemColors.WindowText;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCancelar.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnCancelar.Location = new System.Drawing.Point(264, 338);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 6;
             this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // txtImporte
             // 
             this.txtImporte.Location = new System.Drawing.Point(113, 261);
             this.txtImporte.Name = "txtImporte";
-            this.txtImporte.Size = new System.Drawing.Size(200, 20);
+            this.txtImporte.Size = new System.Drawing.Size(226, 20);
             this.txtImporte.TabIndex = 4;
             // 
             // lblImporte
@@ -143,13 +149,14 @@
             this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpFecha.Location = new System.Drawing.Point(113, 35);
             this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(200, 20);
+            this.dtpFecha.Size = new System.Drawing.Size(226, 20);
             this.dtpFecha.TabIndex = 0;
             // 
             // frmGestionTurnos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.ClientSize = new System.Drawing.Size(363, 450);
             this.Controls.Add(this.dtpFecha);
             this.Controls.Add(this.lblImporte);
@@ -163,6 +170,8 @@
             this.Controls.Add(this.lblServicio);
             this.Controls.Add(this.lblCliente);
             this.Controls.Add(this.lblFecha);
+            this.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.Name = "frmGestionTurnos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
