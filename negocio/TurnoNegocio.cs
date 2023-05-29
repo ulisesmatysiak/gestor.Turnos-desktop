@@ -28,8 +28,8 @@ namespace negocio
                     aux.Servicio = new Servicio();
                     aux.Servicio.Id = (int)datos.Lector["Id"];
                     aux.Servicio.Corte = (string)datos.Lector["Corte"];
-                    //aux.Valor = new Servicio();
-                    //aux.Servicio.Id = (int)datos.Lector["Id"];
+                    aux.Valor = new Servicio();
+                    aux.Servicio.Id = (int)datos.Lector["Id"];
                     aux.Servicio.Valor = (decimal)datos.Lector["Valor"];
                     aux.Autor = new Autor();
                     aux.Autor.Id = (int)datos.Lector["Id"];

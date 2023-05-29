@@ -16,8 +16,10 @@ namespace dominio
 
         public Servicio Servicio { get; set; }
 
+        public Servicio Valor { get; set; }
+
+
         public Autor Autor { get; set; }
 
-        //public decimal Importe{ get; set; }
     }
 }
