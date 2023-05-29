@@ -37,8 +37,6 @@
             this.txtCliente = new System.Windows.Forms.TextBox();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.txtImporte = new System.Windows.Forms.TextBox();
-            this.lblImporte = new System.Windows.Forms.Label();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
@@ -127,22 +125,6 @@
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // txtImporte
-            // 
-            this.txtImporte.Location = new System.Drawing.Point(113, 261);
-            this.txtImporte.Name = "txtImporte";
-            this.txtImporte.Size = new System.Drawing.Size(226, 20);
-            this.txtImporte.TabIndex = 4;
-            // 
-            // lblImporte
-            // 
-            this.lblImporte.AutoSize = true;
-            this.lblImporte.Location = new System.Drawing.Point(33, 263);
-            this.lblImporte.Name = "lblImporte";
-            this.lblImporte.Size = new System.Drawing.Size(45, 13);
-            this.lblImporte.TabIndex = 11;
-            this.lblImporte.Text = "Importe:";
-            // 
             // dtpFecha
             // 
             this.dtpFecha.CustomFormat = "HH mm dddd d MMMM yyyy";
@@ -159,8 +141,6 @@
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.ClientSize = new System.Drawing.Size(363, 450);
             this.Controls.Add(this.dtpFecha);
-            this.Controls.Add(this.lblImporte);
-            this.Controls.Add(this.txtImporte);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.txtCliente);
@@ -193,8 +173,6 @@
         private System.Windows.Forms.TextBox txtCliente;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.TextBox txtImporte;
-        private System.Windows.Forms.Label lblImporte;
         private System.Windows.Forms.DateTimePicker dtpFecha;
     }
 }

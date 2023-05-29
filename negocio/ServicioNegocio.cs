@@ -13,13 +13,14 @@ namespace negocio
 
             try
             {
-                datos.setearConsulta("select Id, Corte from SERVICIO");
+                datos.setearConsulta("select Id, Corte, Valor from SERVICIO");
                 datos.ejecutarLectura();
                 while (datos.Lector.Read())
                 {
                     Servicio aux = new Servicio();
                     aux.Id = (int)datos.Lector["Id"];
-                    aux.Corte = (string)datos.Lector["Corte"];                   
+                    aux.Corte = (string)datos.Lector["Corte"];
+                    aux.Valor = (decimal)datos.Lector["Valor"];
 
                     lista.Add(aux);
                 }
@@ -41,8 +42,9 @@ namespace negocio
 
             try
             {
-                datos.setearConsulta("insert into SERVICIO(Corte) values(@Corte)");
+                datos.setearConsulta("insert into SERVICIO(Corte,Valor) values(@Corte, @Valor)");
                 datos.setearParametro("@Corte", nuevo.Corte);
+                datos.setearParametro("@Valor", nuevo.Valor);
                 datos.ejecutarAccion();
             }
             catch (Exception ex)

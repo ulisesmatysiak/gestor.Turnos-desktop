@@ -40,6 +40,7 @@ namespace presentacion
                 cboServicio.DataSource = servicioNegocio.listar();
                 cboServicio.ValueMember = "Id";
                 cboServicio.DisplayMember = "Corte";
+                
                 cboAutor.DataSource = autorNegocio.listar();
                 cboAutor.ValueMember = "Id";
                 cboAutor.DisplayMember = "Nombre";
@@ -50,7 +51,7 @@ namespace presentacion
                     txtCliente.Text = turno.Cliente;
                     cboServicio.SelectedValue = turno.Servicio.Id;
                     cboAutor.SelectedValue = turno.Autor.Id;
-                    txtImporte.Text = turno.Importe.ToString();
+                    //txtImporte.Text = turno.Importe.ToString();
                 }
             }
             catch (Exception ex)
@@ -71,7 +72,7 @@ namespace presentacion
                 turno.Cliente = txtCliente.Text;
                 turno.Servicio = (Servicio)cboServicio.SelectedItem;
                 turno.Autor = (Autor)cboAutor.SelectedItem;
-                turno.Importe = decimal.Parse(txtImporte.Text);
+                //turno.Importe = decimal.Parse(txtImporte.Text);
 
                 if (turno.Id != 0)
                 {

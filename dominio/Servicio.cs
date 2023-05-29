@@ -11,6 +11,8 @@ namespace dominio
         public int Id { get; set; }
 
         public string Corte { get; set; }
+       
+        public decimal Valor { get; set; }
 
         public override string ToString()
         {

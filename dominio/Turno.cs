@@ -18,6 +18,6 @@ namespace dominio
 
         public Autor Autor { get; set; }
 
-        public decimal Importe { get; set; }
+        //public decimal Importe{ get; set; }
     }
 }
