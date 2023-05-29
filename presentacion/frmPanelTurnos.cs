@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using negocio;
 using dominio;
+using System.Collections;
 
 namespace presentacion
 {
@@ -29,10 +30,12 @@ namespace presentacion
         private void cargar()
         {
             TurnoNegocio negocio = new TurnoNegocio();
+
             try
-            {
+            {            
                 listaTurno = negocio.listar();
                 dgvTurnos.DataSource = listaTurno;
+                
             }
             catch (Exception ex)
             {
@@ -52,7 +55,7 @@ namespace presentacion
             Turno seleccionado;
             seleccionado = (Turno)dgvTurnos.CurrentRow.DataBoundItem;
 
-            frmGestionTurnos modificar = new frmGestionTurnos(seleccionado); 
+            frmGestionTurnos modificar = new frmGestionTurnos(seleccionado);
             modificar.ShowDialog();
             cargar();
         }
@@ -73,7 +76,7 @@ namespace presentacion
                 }
             }
             catch (Exception ex)
-            { 
+            {
                 throw ex;
             }
         }
