@@ -32,10 +32,10 @@ namespace presentacion
             TurnoNegocio negocio = new TurnoNegocio();
 
             try
-            {            
+            {
                 listaTurno = negocio.listar();
                 dgvTurnos.DataSource = listaTurno;
-                
+
             }
             catch (Exception ex)
             {
@@ -121,5 +121,7 @@ namespace presentacion
         {
             dgvTurnos.Columns["Id"].Visible = false;
         }
+
+        
     }
 }

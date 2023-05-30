@@ -14,21 +14,39 @@ namespace presentacion
 {
     public partial class frmGestionServicios : Form
     {
-        //private Servicio servicio = null;
+        private Servicio servicio = null;
         public frmGestionServicios()
         {
             InitializeComponent();
         }
 
-        //public frmGestionServicios(Servicio servicio)
-        //{
-        //    InitializeComponent();
-        //    this.servicio = servicio;
-        //}
+        public frmGestionServicios(Servicio servicio)
+        {
+            InitializeComponent();
+            this.servicio = servicio;
+            Text = "Modificar servicio";
+        }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void frmGestionServicios_Load(object sender, EventArgs e)
+        {
+            ServicioNegocio negocio = new ServicioNegocio();
+            try
+            {
+                if (servicio != null)
+                {
+                    txtServicios.Text = servicio.Corte;
+                    txtValor.Text = servicio.Valor.ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
@@ -38,21 +56,31 @@ namespace presentacion
 
             try
             {
+                if (servicio == null)
+                    servicio = new Servicio();
+
                 servicio.Corte = txtServicios.Text;
                 servicio.Valor = decimal.Parse(txtValor.Text);
-                negocio.agregar(servicio);
-                MessageBox.Show("Agregado Exitosamente");
+
+                if (servicio.Id != 0)
+                {
+                    negocio.modificar(servicio);
+                    MessageBox.Show("Modificado Exitosamente");
+                }
+                else
+                {
+                    negocio.agregar(servicio);
+                    MessageBox.Show("Agregado Exitosamente");
+                }
+
                 Close();
             }
             catch (Exception ex)
             {
                 throw ex;
             }
-
-            //if (servicio == null)
-            //    servicio = new Servicio();
-
-           
         }
+
+
     }
 }

@@ -75,13 +75,14 @@
             // 
             this.btnModificar.BackColor = System.Drawing.SystemColors.WindowText;
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnModificar.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.btnModificar.ForeColor = System.Drawing.SystemColors.Window;
             this.btnModificar.Location = new System.Drawing.Point(154, 218);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(75, 23);
             this.btnModificar.TabIndex = 4;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // frmPanelServicios
             // 

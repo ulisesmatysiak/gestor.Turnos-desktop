@@ -72,5 +72,15 @@ namespace presentacion
         {
             dgvServicios.Columns["Id"].Visible = false;
         }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            Servicio seleccionado;
+            seleccionado = (Servicio)dgvServicios.CurrentRow.DataBoundItem;
+
+            frmGestionServicios modificar = new frmGestionServicios();
+            modificar.ShowDialog();
+            cargar();
+        }
     }
 }

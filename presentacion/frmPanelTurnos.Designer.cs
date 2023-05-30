@@ -43,6 +43,7 @@
             this.dgvTurnos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvTurnos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
             this.dgvTurnos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTurnos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvTurnos.GridColor = System.Drawing.SystemColors.WindowFrame;
             this.dgvTurnos.Location = new System.Drawing.Point(12, 12);
             this.dgvTurnos.Name = "dgvTurnos";
