@@ -31,6 +31,7 @@
             this.dgvServicios = new System.Windows.Forms.DataGridView();
             this.btnAgregarServicio = new System.Windows.Forms.Button();
             this.btnElliminarServicio = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvServicios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -41,7 +42,7 @@
             this.dgvServicios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvServicios.Location = new System.Drawing.Point(41, 32);
             this.dgvServicios.Name = "dgvServicios";
-            this.dgvServicios.Size = new System.Drawing.Size(169, 150);
+            this.dgvServicios.Size = new System.Drawing.Size(292, 150);
             this.dgvServicios.TabIndex = 0;
             // 
             // btnAgregarServicio
@@ -62,7 +63,7 @@
             this.btnElliminarServicio.BackColor = System.Drawing.SystemColors.WindowText;
             this.btnElliminarServicio.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnElliminarServicio.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnElliminarServicio.Location = new System.Drawing.Point(135, 218);
+            this.btnElliminarServicio.Location = new System.Drawing.Point(258, 218);
             this.btnElliminarServicio.Name = "btnElliminarServicio";
             this.btnElliminarServicio.Size = new System.Drawing.Size(75, 23);
             this.btnElliminarServicio.TabIndex = 3;
@@ -70,12 +71,25 @@
             this.btnElliminarServicio.UseVisualStyleBackColor = false;
             this.btnElliminarServicio.Click += new System.EventHandler(this.btnElliminarServicio_Click);
             // 
+            // btnModificar
+            // 
+            this.btnModificar.BackColor = System.Drawing.SystemColors.WindowText;
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnModificar.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.btnModificar.Location = new System.Drawing.Point(154, 218);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(75, 23);
+            this.btnModificar.TabIndex = 4;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = false;
+            // 
             // frmPanelServicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.ClientSize = new System.Drawing.Size(245, 260);
+            this.ClientSize = new System.Drawing.Size(360, 260);
+            this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnElliminarServicio);
             this.Controls.Add(this.btnAgregarServicio);
             this.Controls.Add(this.dgvServicios);
@@ -94,5 +108,6 @@
         private System.Windows.Forms.DataGridView dgvServicios;
         private System.Windows.Forms.Button btnAgregarServicio;
         private System.Windows.Forms.Button btnElliminarServicio;
+        private System.Windows.Forms.Button btnModificar;
     }
 }

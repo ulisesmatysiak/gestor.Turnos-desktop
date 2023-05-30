@@ -32,6 +32,8 @@
             this.txtServicios = new System.Windows.Forms.TextBox();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.lblValor = new System.Windows.Forms.Label();
+            this.txtValor = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblCorte
@@ -55,7 +57,7 @@
             this.btnAceptar.BackColor = System.Drawing.SystemColors.WindowText;
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAceptar.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnAceptar.Location = new System.Drawing.Point(69, 144);
+            this.btnAceptar.Location = new System.Drawing.Point(69, 186);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
             this.btnAceptar.TabIndex = 3;
@@ -68,7 +70,7 @@
             this.btnCancelar.BackColor = System.Drawing.SystemColors.WindowText;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnCancelar.Location = new System.Drawing.Point(162, 143);
+            this.btnCancelar.Location = new System.Drawing.Point(162, 185);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 4;
@@ -76,12 +78,30 @@
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // lblValor
+            // 
+            this.lblValor.AutoSize = true;
+            this.lblValor.Location = new System.Drawing.Point(69, 109);
+            this.lblValor.Name = "lblValor";
+            this.lblValor.Size = new System.Drawing.Size(34, 13);
+            this.lblValor.TabIndex = 5;
+            this.lblValor.Text = "Valor:";
+            // 
+            // txtValor
+            // 
+            this.txtValor.Location = new System.Drawing.Point(137, 109);
+            this.txtValor.Name = "txtValor";
+            this.txtValor.Size = new System.Drawing.Size(100, 20);
+            this.txtValor.TabIndex = 6;
+            // 
             // frmGestionServicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.ClientSize = new System.Drawing.Size(297, 178);
+            this.ClientSize = new System.Drawing.Size(297, 233);
+            this.Controls.Add(this.txtValor);
+            this.Controls.Add(this.lblValor);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.txtServicios);
@@ -101,5 +121,7 @@
         private System.Windows.Forms.TextBox txtServicios;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Label lblValor;
+        private System.Windows.Forms.TextBox txtValor;
     }
 }

@@ -39,6 +39,7 @@ namespace presentacion
             try
             {
                 servicio.Corte = txtServicios.Text;
+                servicio.Valor = decimal.Parse(txtValor.Text);
                 negocio.agregar(servicio);
                 MessageBox.Show("Agregado Exitosamente");
                 Close();

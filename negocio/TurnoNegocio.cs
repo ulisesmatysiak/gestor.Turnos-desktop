@@ -58,11 +58,12 @@ namespace negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta("insert into TURNOS(Fecha,Cliente,IdServicio,IdAutor) values (@Fecha,@Cliente,@IdServicio,@IdAutor)");
+                datos.setearConsulta("insert into TURNOS(Fecha,Cliente,IdServicio,IdAutor,IdValor) values (@Fecha,@Cliente,@IdServicio,@IdAutor,@IdValor)");
                 datos.setearParametro("@Fecha", nuevo.Fecha);
                 datos.setearParametro("@Cliente", nuevo.Cliente);
                 datos.setearParametro("@IdServicio", nuevo.Servicio.Id);
                 datos.setearParametro("@IdAutor", nuevo.Autor.Id);
+                datos.setearParametro("@IdValor", nuevo.Valor.Id);
                 //datos.setearParametro("@Importe", nuevo.Importe);
                 datos.ejecutarAccion();
             }
@@ -81,11 +82,12 @@ namespace negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta("update TURNOS set Fecha = @Fecha, Cliente = @Cliente, IdServicio = @IdServicio, IdAutor = @IdAutor where Id = @Id");
+                datos.setearConsulta("update TURNOS set Fecha = @Fecha, Cliente = @Cliente, IdServicio = @IdServicio, IdAutor = @IdAutor, IdValor = @IdValor where Id = @Id");
                 datos.setearParametro("@Fecha", turno.Fecha);
                 datos.setearParametro("@Cliente", turno.Cliente);
                 datos.setearParametro("@IdServicio", turno.Servicio.Id);
                 datos.setearParametro("@IdAutor", turno.Autor.Id);
+                datos.setearParametro("@IdValor", turno.Valor.Id);
                 //datos.setearParametro("@Importe", turno.Importe);
                 datos.setearParametro("@Id", turno.Id);
                 datos.ejecutarAccion();
@@ -122,7 +124,7 @@ namespace negocio
 
             try
             {
-                datos.setearConsulta("select T.Id, T.Fecha, T.Cliente, S.Corte, S.Valor, A.Nombre from AUTOR A, SERVICIO S, TURNOS T where T.IdServicio = S.Id and T.IdAutor = A.Id and DATEDIFF(day,FECHA,GETDATE())=0 order by Fecha asc");
+                datos.setearConsulta("Select T.Id, T.Fecha, T.Cliente, S.Corte , V.Valor, A.Nombre from AUTOR A, SERVICIO S, SERVICIO V, TURNOS T where T.IdServicio = S.Id and T.IdAutor = A.Id and T.IdServicio = V.Id  and DATEDIFF(day,FECHA,GETDATE())=0 order by Fecha asc");
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
@@ -134,6 +136,11 @@ namespace negocio
                     aux.Servicio = new Servicio();
                     aux.Servicio.Id = (int)datos.Lector["Id"];
                     aux.Servicio.Corte = (string)datos.Lector["Corte"];
+                    aux.Servicio.Valor = (decimal)datos.Lector["Valor"];
+                    aux.Valor = new Servicio();
+                    aux.Valor.Id = (int)datos.Lector["Id"];
+                    aux.Valor.Valor = (decimal)datos.Lector["Valor"];
+                    aux.Valor.Corte = (string)datos.Lector["Corte"];
                     aux.Autor = new Autor();
                     aux.Autor.Id = (int)datos.Lector["Id"];
                     aux.Autor.Nombre = (string)datos.Lector["Nombre"];
@@ -160,7 +167,7 @@ namespace negocio
 
             try
             {
-                datos.setearConsulta("select T.Id, T.Fecha, T.Cliente, S.Corte, S.Valor, A.Nombre from AUTOR A, SERVICIO S, TURNOS T where T.IdServicio = S.Id and T.IdAutor = A.Id and t.Fecha >= DATEADD(wk,(DATEDIFF(wk,0,GETDATE()-1)),0) and t.Fecha <= DATEADD(ms,-3,(DATEADD(wk,DATEDIFF(wk,0,GETDATE()-1),7))) ORDER BY T.Fecha ASC ");
+                datos.setearConsulta("select T.Id, T.Fecha, T.Cliente, S.Corte , V.Valor, A.Nombre from AUTOR A, SERVICIO S, SERVICIO V, TURNOS T where T.IdServicio = S.Id and T.IdAutor = A.Id and T.IdServicio = V.Id and t.Fecha >= DATEADD(wk,(DATEDIFF(wk,0,GETDATE()-1)),0) and t.Fecha <= DATEADD(ms,-3,(DATEADD(wk,DATEDIFF(wk,0,GETDATE()-1),7))) ORDER BY T.Fecha ASC ");
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
@@ -172,6 +179,11 @@ namespace negocio
                     aux.Servicio = new Servicio();
                     aux.Servicio.Id = (int)datos.Lector["Id"];
                     aux.Servicio.Corte = (string)datos.Lector["Corte"];
+                    aux.Servicio.Valor = (decimal)datos.Lector["Valor"];
+                    aux.Valor = new Servicio();
+                    aux.Valor.Id = (int)datos.Lector["Id"];
+                    aux.Valor.Valor = (decimal)datos.Lector["Valor"];
+                    aux.Valor.Corte = (string)datos.Lector["Corte"];
                     aux.Autor = new Autor();
                     aux.Autor.Id = (int)datos.Lector["Id"];
                     aux.Autor.Nombre = (string)datos.Lector["Nombre"];
