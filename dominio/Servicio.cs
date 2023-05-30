@@ -12,11 +12,16 @@ namespace dominio
 
         public string Corte { get; set; }
 
+        //public override string ToString()
+        //{
+        //    return Corte;
+        //}
+
         public decimal Valor { get; set; }
 
         //public override string ToString()
         //{
-        //    return Corte;
+        //    return Valor.ToString();
         //}
     }
 }

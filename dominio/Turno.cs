@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,9 +17,9 @@ namespace dominio
 
         public Servicio Servicio { get; set; }
 
-        public Autor Autor { get; set; }
-
         public Servicio Valor { get; set; }
+
+        public Autor Autor { get; set; }
 
     }
 }

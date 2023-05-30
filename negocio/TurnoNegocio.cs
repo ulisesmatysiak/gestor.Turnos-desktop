@@ -13,10 +13,11 @@ namespace negocio
         {
             List<Turno> lista = new List<Turno>();
             AccesoDatos datos = new AccesoDatos();
+            
 
             try
             {
-                datos.setearConsulta("select T.Id, T.Fecha, T.Cliente, S.Corte, S.Valor, A.Nombre from AUTOR A, SERVICIO S, TURNOS T where T.IdServicio = S.Id and T.IdAutor = A.Id order by Fecha asc");
+                datos.setearConsulta("select T.Id, T.Fecha, T.Cliente, S.Corte , V.Valor, A.Nombre from AUTOR A, SERVICIO S, SERVICIO V, TURNOS T where T.IdServicio = S.Id and T.IdAutor = A.Id and T.IdServicio = V.Id order by Fecha asc");
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
@@ -28,9 +29,11 @@ namespace negocio
                     aux.Servicio = new Servicio();
                     aux.Servicio.Id = (int)datos.Lector["Id"];
                     aux.Servicio.Corte = (string)datos.Lector["Corte"];
-                    aux.Valor = new Servicio();
-                    aux.Servicio.Id = (int)datos.Lector["Id"];
                     aux.Servicio.Valor = (decimal)datos.Lector["Valor"];
+                    aux.Valor = new Servicio();
+                    aux.Valor.Id = (int)datos.Lector["Id"];
+                    aux.Valor.Valor = (decimal)datos.Lector["Valor"];
+                    aux.Valor.Corte = (string)datos.Lector["Corte"];
                     aux.Autor = new Autor();
                     aux.Autor.Id = (int)datos.Lector["Id"];
                     aux.Autor.Nombre = (string)datos.Lector["Nombre"];
