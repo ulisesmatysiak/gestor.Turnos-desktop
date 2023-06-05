@@ -115,7 +115,7 @@ namespace negocio
 
             try
             {
-                datos.setearConsulta("Select T.Id, T.Fecha, T.Cliente, S.Corte , V.Valor, A.Nombre from AUTOR A, SERVICIO S, SERVICIO V, TURNOS T where T.IdServicio = S.Id and T.IdAutor = A.Id and T.IdServicio = V.Id  and DATEDIFF(day,FECHA,GETDATE())=0 order by Fecha asc");
+                datos.setearConsulta("select T.Id, T.Fecha, T.Cliente, S.Corte , S.Valor, A.Nombre from AUTOR A, SERVICIO S, TURNOS T where T.IdServicio = S.Id and T.IdAutor = A.Id   and DATEDIFF(day,FECHA,GETDATE())=0 order by Fecha asc");
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
@@ -153,7 +153,7 @@ namespace negocio
 
             try
             {
-                datos.setearConsulta("select T.Id, T.Fecha, T.Cliente, S.Corte , V.Valor, A.Nombre from AUTOR A, SERVICIO S, SERVICIO V, TURNOS T where T.IdServicio = S.Id and T.IdAutor = A.Id and T.IdServicio = V.Id and t.Fecha >= DATEADD(wk,(DATEDIFF(wk,0,GETDATE()-1)),0) and t.Fecha <= DATEADD(ms,-3,(DATEADD(wk,DATEDIFF(wk,0,GETDATE()-1),7))) ORDER BY T.Fecha ASC ");
+                datos.setearConsulta("select T.Id, T.Fecha, T.Cliente, S.Corte , S.Valor, A.Nombre from AUTOR A, SERVICIO S, TURNOS T where T.IdServicio = S.Id and T.IdAutor = A.Id and t.Fecha >= DATEADD(wk,(DATEDIFF(wk,0,GETDATE()-1)),0) and t.Fecha <= DATEADD(ms,-3,(DATEADD(wk,DATEDIFF(wk,0,GETDATE()-1),7))) ORDER BY T.Fecha ASC ");
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
