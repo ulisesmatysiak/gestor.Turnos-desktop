@@ -18,10 +18,5 @@ namespace dominio
         }
 
         public decimal Valor { get; set; }
-
-        //public override string ToString()
-        //{
-        //    return Valor.ToString();
-        //}
     }
 }

@@ -78,7 +78,7 @@ namespace presentacion
             Servicio seleccionado;
             seleccionado = (Servicio)dgvServicios.CurrentRow.DataBoundItem;
 
-            frmGestionServicios modificar = new frmGestionServicios();
+            frmGestionServicios modificar = new frmGestionServicios(seleccionado);
             modificar.ShowDialog();
             cargar();
         }
