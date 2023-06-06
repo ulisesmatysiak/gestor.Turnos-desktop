@@ -47,16 +47,17 @@
             this.dgvTurnos.GridColor = System.Drawing.SystemColors.WindowFrame;
             this.dgvTurnos.Location = new System.Drawing.Point(12, 12);
             this.dgvTurnos.Name = "dgvTurnos";
-            this.dgvTurnos.Size = new System.Drawing.Size(547, 333);
+            this.dgvTurnos.Size = new System.Drawing.Size(548, 333);
             this.dgvTurnos.TabIndex = 0;
             this.dgvTurnos.SelectionChanged += new System.EventHandler(this.dgvTurnos_SelectionChanged);
             // 
             // btnAgregar
             // 
+            this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAgregar.BackColor = System.Drawing.SystemColors.WindowText;
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAgregar.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnAgregar.Location = new System.Drawing.Point(13, 384);
+            this.btnAgregar.Location = new System.Drawing.Point(598, 34);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
             this.btnAgregar.TabIndex = 1;
@@ -66,10 +67,11 @@
             // 
             // btnEliminar
             // 
+            this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEliminar.BackColor = System.Drawing.SystemColors.WindowText;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEliminar.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnEliminar.Location = new System.Drawing.Point(247, 384);
+            this.btnEliminar.Location = new System.Drawing.Point(598, 178);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
             this.btnEliminar.TabIndex = 2;
@@ -79,10 +81,11 @@
             // 
             // btnModificar
             // 
+            this.btnModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnModificar.BackColor = System.Drawing.SystemColors.WindowText;
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnModificar.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnModificar.Location = new System.Drawing.Point(130, 384);
+            this.btnModificar.Location = new System.Drawing.Point(598, 106);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(75, 23);
             this.btnModificar.TabIndex = 3;
@@ -92,10 +95,11 @@
             // 
             // btnHoy
             // 
+            this.btnHoy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnHoy.BackColor = System.Drawing.SystemColors.WindowText;
             this.btnHoy.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnHoy.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnHoy.Location = new System.Drawing.Point(364, 384);
+            this.btnHoy.Location = new System.Drawing.Point(598, 250);
             this.btnHoy.Name = "btnHoy";
             this.btnHoy.Size = new System.Drawing.Size(75, 23);
             this.btnHoy.TabIndex = 4;
@@ -105,10 +109,11 @@
             // 
             // btnSemana
             // 
+            this.btnSemana.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSemana.BackColor = System.Drawing.SystemColors.WindowText;
             this.btnSemana.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSemana.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnSemana.Location = new System.Drawing.Point(481, 384);
+            this.btnSemana.Location = new System.Drawing.Point(598, 322);
             this.btnSemana.Name = "btnSemana";
             this.btnSemana.Size = new System.Drawing.Size(75, 23);
             this.btnSemana.TabIndex = 5;
@@ -121,7 +126,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.ClientSize = new System.Drawing.Size(670, 450);
+            this.ClientSize = new System.Drawing.Size(702, 450);
             this.Controls.Add(this.btnSemana);
             this.Controls.Add(this.btnHoy);
             this.Controls.Add(this.btnModificar);
@@ -131,8 +136,8 @@
             this.ForeColor = System.Drawing.SystemColors.WindowText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmPanelTurnos";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Turnos";
             this.Load += new System.EventHandler(this.frmTurnos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTurnos)).EndInit();

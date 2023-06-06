@@ -40,6 +40,7 @@
             this.dgvServicios.BackgroundColor = System.Drawing.SystemColors.WindowFrame;
             this.dgvServicios.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvServicios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvServicios.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvServicios.Location = new System.Drawing.Point(41, 32);
             this.dgvServicios.Name = "dgvServicios";
             this.dgvServicios.Size = new System.Drawing.Size(292, 150);

@@ -39,6 +39,7 @@
             this.dgvAutores.BackgroundColor = System.Drawing.SystemColors.WindowFrame;
             this.dgvAutores.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvAutores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAutores.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvAutores.Location = new System.Drawing.Point(20, 21);
             this.dgvAutores.Name = "dgvAutores";
             this.dgvAutores.Size = new System.Drawing.Size(197, 134);
